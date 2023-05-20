@@ -104,7 +104,7 @@ export default {
           remoteSocket = connect({
             hostname: addressRemote,
             port: portRemote,
-          },{ secureTransport: "use", allowHalfOpen: true});
+          },{ secureTransport: "starttls"});
           log(`connected`);
 
           const writer = remoteSocket.writable.getWriter();
