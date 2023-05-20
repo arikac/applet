@@ -98,7 +98,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
         remoteSocket = connect({
           hostname: addressRemote,
           port: portRemote,
-        },{ allowHalfOpen: true, secureTransport: "starttls"}).startTls();
+        },{ allowHalfOpen: true, secureTransport: "off"});
         log(`connected`);
 
         const writer = remoteSocket.writable.getWriter();
